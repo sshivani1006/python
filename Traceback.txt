@@ -1,0 +1,44 @@
+TRACEBACK
+
+Environment:
+
+
+Request Method: POST
+Request URL: http://127.0.0.1:8000/iblog/postComment
+
+Django Version: 4.0.1
+Python Version: 3.10.0
+Installed Applications:
+['django.contrib.admin',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.staticfiles',
+ 'iblog.apps.IblogConfig',
+ 'tinymce']
+Installed Middleware:
+['django.middleware.security.SecurityMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware']
+
+
+
+Traceback (most recent call last):
+  File "C:\Users\CG-DTE\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\CG-DTE\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python\BlogProject\myblog\iblog\views.py", line 125, in postComment
+    comment = Comment(message=comment, username=user, post=post)
+  File "C:\Users\CG-DTE\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 489, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Users\CG-DTE\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+
+Exception Type: ValueError at /iblog/postComment
+Exception Value: Cannot assign "<SimpleLazyObject: <User: admin>>": "Comment.username" must be a "User" instance.
